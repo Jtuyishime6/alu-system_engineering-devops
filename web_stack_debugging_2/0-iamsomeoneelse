@@ -1,0 +1,6 @@
+#!/bin/bash
+# 0-iamsomeoneelse
+
+# $1 = username passed as argument
+su -s /bin/bash $1 -c "whoami"
+
