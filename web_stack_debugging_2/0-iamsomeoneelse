@@ -1,6 +1,10 @@
 #!/bin/bash
-# 0-iamsomeoneelse
+# Check if user passed
+if [ -z "$1" ]; then
+    echo "Usage: $0 username"
+    exit 1
+fi
 
-# $1 = username passed as argument
-su -s /bin/bash $1 -c "whoami"
+# Run whoami as the given user
+sudo -u "$1" whoami
 
